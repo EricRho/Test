@@ -1,5 +1,3 @@
-var app = angular.module('myApp', ['ngResource']);
-
 app.controller('clockCtrl', ['$scope', function($scope) {
   $scope.clock = new Date();
   var updateClock = function() {
@@ -9,4 +7,3 @@ app.controller('clockCtrl', ['$scope', function($scope) {
     $scope.$apply(updateClock);
   });
 }]);
-

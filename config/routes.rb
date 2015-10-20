@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :teams
+  resources :leagues
 
   get 'welcome/index'
+
+  scope :api do
+    resources :teams, defaults: { format: :json}
+  end
 
   root :to => 'welcome#index'
 
