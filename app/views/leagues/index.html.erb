@@ -2,7 +2,7 @@
 
 <h1>League Teams</h1>
 
-<!-- <table>
+<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -13,17 +13,16 @@
   <tbody>
     <% @leagues.each do |league| %>
       <tr>
-        <td><%= league.name %></td>
-        <td><%= link_to 'Show', league %></td>
+        <td><%= link_to league.name, league %></td>
         <td><%= link_to 'Edit', edit_league_path(league) %></td>
         <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table> -->
+</table>
 <div ng-controller='leaguesCtrl'>
   <li ng-repeat='league in leagues'>
-    {{ league.name }}
+
   </li>
 </div>
 

@@ -8,7 +8,15 @@
 
 Team.delete_all
 
-Team.create!(name: 'Team 1')
-Team.create!(name: 'Team 2')
-Team.create!(name: 'Team 3')
-Team.create!(name: 'Team 4')
+Team.create!(name: 'Team 1', league_id: 1)
+Team.create!(name: 'Team 2', league_id: 1)
+Team.create!(name: 'Team 3', league_id: 1)
+Team.create!(name: 'Team 4', league_id: 1)
+Team.create!(name: 'Team 5', league_id: 1)
+Team.create!(name: 'Team 6', league_id: 1)
+Team.create!(name: 'Team 7', league_id: 1)
+
+League.delete_all
+
+League.create!(name: 'League 1')
+League.create!(name: 'League 2')
