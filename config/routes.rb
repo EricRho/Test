@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   resources :leagues
+  resources :teams
 
   get 'welcome/index'
 
-  scope :api do
-    resources :teams, defaults: { format: :json}
-  end
+  # scope :api do
+  #   resources :teams, defaults: { format: :json}
+  # end
 
-  root :to => 'welcome#index'
+  root :to => 'leagues#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
